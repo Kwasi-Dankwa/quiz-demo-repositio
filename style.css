@@ -1,0 +1,149 @@
+/*Universal Selector*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Root Variables -USing DRY rule to avoid redundancy*/
+:root {
+    --purple: purple;
+    --gray: gray;
+    --green: green;
+}
+
+
+
+/*Element Selectors*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    line-height: 1.5;
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Header Styling*/
+
+/*This spaces high scores and time*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.highscore a {
+    color: var(--purple);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.timer {
+    font-size: 25px;
+}
+
+/* Start Quiz Styling */
+.begin-quiz {
+    text-align: center;
+}
+
+h1.centered {
+    margin: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--gray);
+    border-top: 1px solid var(--gray);
+    margin: 20px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-grid {
+    display: block;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    overflow: visible;
+    background-color: var(--purple);
+    border-radius: 12px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--purple);
+}
+
+.hide {
+    display: none;
+}
+
+.btn.correct {
+    background-color: var(--green);
+}
+
+.btn.wrong {
+    background-color: var(--gray);
+}
+
+/* Wrapper for buttons Styling */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* Initials Entry Styling */
+input[type="text"] {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Highscores Page Styling */
+.highscore {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.name-div,
+.score-div {
+    flex: 1 40%;
+    padding: 10px 0;
+    border: 1px solid var(--green);
+}
+
+/*Media Query styling for smaller devices*/
+/* this style affects any screen smaller than 600px */
+@media screen and (max-width: 600px) {
+    .btn-grid {
+        grid-template-columns: repeat(1, auto);
+        gap: 0;
+        margin: 0;
+    }
+}

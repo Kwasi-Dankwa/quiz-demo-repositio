@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PL Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<!--Body Section-->
+
+<body>
+    <header>
+        <div class="highscore">
+            <a id="highscore-link">High scores</a>
+        </div>
+        <div class="timer" id="timer"> Time: 75</div>
+    </header>
+
+    <!--Quiz Front Page-->
+
+    <section id="quiz-container" class="begin-quiz">
+        <h1>Welcome to the Premier League History Quiz Challenge</h1>
+        <p>This quiz is to test how well you know the Premier League in 75 seconds. <br> You have 5 questions to answer, but
+            keep in mind that you will lose 10 seconds for incorrect answers. Click the "Start Quiz" button when ready
+        </p>
+        <div class="controls">
+            <button id="button" class="button">Start Quiz</button>
+        </div>
+    </section>
+
+    <!--Section for Quiz Questions-->
+
+    <section id="question-container" class="hide">
+        <h2 id="question">Question</h2>
+        <div id="answer-buttons" class="bt-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <h2 id="check-answer" class="correct-wrong hide"></h2>
+        <div class="controls">
+            <button id="next-btn" class="next-btn hide">Next</button>
+        </div>
+    </section>
+
+    <!--Enter your data after Quiz is done/Section-->
+
+    <section id="score-container" class="hide">
+        <form id="send-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter your initials:</label>
+            <input type="text" id="initials-field" maxlength="3" placeholder="Initials" />
+            <button id="send-btn">Send</button>
+        </form>
+    </section>
+
+    <!--HighScores Section after game is done-->
+
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">Highscores</h1>
+            <div id="highscore" class="highscore highscore-list">
+            </div>
+            <div class="controls">
+                <button id="restart-btn">Go Back</button>
+                <button id="clear-btn">Clear Scores</button>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
