@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-/*Root Variables -USing DRY rule to avoid redundancy*/
+/*Root Variables -USing DRY rule to avoid redundancy in code*/
 :root {
     --purple: purple;
     --gray: gray;
